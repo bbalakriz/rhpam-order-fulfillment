@@ -75,7 +75,7 @@ public class StockReviewMockWih implements WorkItemHandler {
         }
 
 		// return the iRth line of the "products.txt" in resource path
-		return Files.readAllLines(Paths.get("src/main/resources/products.txt")).get(iR);
+		return Files.readAllLines(Paths.get("home/bbalasub/Downloads/products.txt")).get(iR);
 	}
 
 	private boolean calculateInStock() {
