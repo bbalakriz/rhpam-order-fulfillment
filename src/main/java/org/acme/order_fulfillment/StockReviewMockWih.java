@@ -65,7 +65,7 @@ public class StockReviewMockWih implements WorkItemHandler {
 		int iR = rnd.nextInt(LINES_IN_FILE) + 1;
 
 		// return the iRth line of the "products.txt" in resource path
-		return Files.readAllLines(Paths.get("/data/products.txt")).get(iR);
+		return Files.readAllLines(Paths.get("/products.txt")).get(iR);
 	}
 
 	private boolean calculateInStock() {
