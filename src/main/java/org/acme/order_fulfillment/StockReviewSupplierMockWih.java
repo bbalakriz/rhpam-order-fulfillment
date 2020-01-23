@@ -19,8 +19,8 @@ public class StockReviewSupplierMockWih implements WorkItemHandler {
 		ProductOrder po = (ProductOrder) workItem.getParameter("productOrder");
 
 		int deliverable = calculateDeliverable();
-		//po.setUndeliverable(deliverable == 0);
-		po.setUndeliverable(true);
+		po.setUndeliverable(deliverable == 0);
+		//po.setUndeliverable(true);
 		po.setLateDelivery(deliverable > 2);
 		po.setSupplierDeliveryDays(deliverable);
 
