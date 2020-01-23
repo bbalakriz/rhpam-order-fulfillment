@@ -74,8 +74,7 @@ public class StockReviewMockWih implements WorkItemHandler {
 		Random rnd = new Random();
 		int iR = rnd.nextInt(10) + 1;
 		// 60% chances of in stock
-		//return iR <= 6;
-		return false;
+		return iR <= 6;
 	}
 
 }
