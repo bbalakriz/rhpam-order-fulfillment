@@ -63,6 +63,14 @@ public class StockReviewMockWih implements WorkItemHandler {
 		final int LINES_IN_FILE = 144;
 		Random rnd = new Random();
 		int iR = rnd.nextInt(LINES_IN_FILE) + 1;
+		
+		ClassLoader cl = ClassLoader.getSystemClassLoader();
+
+        URL[] urls = ((URLClassLoader)cl).getURLs();
+
+        for(URL url: urls){
+        	System.out.println(url.getFile());
+        }
 
 		// return the iRth line of the "products.txt" in resource path
 		return Files.readAllLines(Paths.get("src/main/resources/products.txt")).get(iR);
